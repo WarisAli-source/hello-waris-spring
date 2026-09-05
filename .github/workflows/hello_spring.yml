@@ -20,7 +20,7 @@ jobs:
                 
             - name: Build and Test Application (Maven)
               working-directory: hello-waris-app/src/main/java/com/waris/hello_waris_app
-              run: mvn -B clean verify 
+              run: ./mvn -B clean verify 
                 
             - name: Upload Test Reports
               uses: actions/upload-artifact@v7
