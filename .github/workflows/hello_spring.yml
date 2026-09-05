@@ -62,7 +62,8 @@ jobs:
               uses: docker/build-push-action@v7
               with:
                 push: true
-                tags: ${{ vars.DOCKERHUB_USERNAME }}/hello-waris-spring:latest
+                tags: ${{ secrets.DOCKERHUB_USERNAME }}/hello-waris-spring:latest
+
 
             - name: Run Docker Container
-              run: docker run -d -p 8080:8080 my-spring-boot-app                
+              run: docker run -d -p 8080:8080 ${{ secrets.DOCKERHUB_USERNAME }}/hello-waris-spring
