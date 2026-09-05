@@ -18,7 +18,10 @@ jobs:
                 distribution: 'temurin'
                 java-version: '21'
             - name: List repo contents
-              run: ls -R    
+              run: ls -R
+                  
+            - name: Make mvnw executable
+              run: chmod +x ./mvnw
 
             - name: Build and Test Application (Maven)
               working-directory: hello-waris-spring
