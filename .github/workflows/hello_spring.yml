@@ -21,7 +21,7 @@ jobs:
               run: ls -R    
 
             - name: Build and Test Application (Maven)
-              working-directory: hello-waris-app
+            #   working-directory: hello_waris_app
               run: ./mvnw -B clean verify
                 
             - name: Upload Test Reports
